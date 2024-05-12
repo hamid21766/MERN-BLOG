@@ -1,9 +1,5 @@
 function SignIn() {
-  return (
-    <div>
-      <h1>This is SignIn Page!</h1>
-    </div>
-  );
+  return <div className='min-h'>Sign In Page!!!!!!!!!!!!!!!!!!</div>;
 }
 
 export default SignIn;
