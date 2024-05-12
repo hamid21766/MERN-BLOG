@@ -23,3 +23,15 @@ app.listen(3000, () => {
 
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
+
+// -------------------Error Middleware function ----------------------
+
+app.use((err, req, res, nex) => {
+  const statusCode = err.statusCode || 500;
+  const message = err.message || "Internal server Error!";
+  res.status(statusCode).json({
+    success: false,
+    statusCode,
+    message,
+  });
+});
